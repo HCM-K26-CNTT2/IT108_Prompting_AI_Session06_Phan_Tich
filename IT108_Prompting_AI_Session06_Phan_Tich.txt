@@ -1,0 +1,69 @@
+﻿[Phân tích] So sánh Trade-off các giải pháp ra lệnh cho Ứng dụng AI trong Học tập & Nghiên cứu 
+Bước 1: Đề xuất 2 prompt mẫu
+Viết rõ 2 prompt tương ứng với 2 phương án giải quyết.
+Prompt 1 (đơn giản):
+Bạn hãy chấm bài làm của sinh viên theo thang điểm 10 giúp tôi, thêm vào đó hãy chỉ ra lỗi sai và giải thích theo kỹ thuật Feynman.
+* Đề bài: Giải thích khái niệm Mảng (Array) trong ngôn ngữ lập trình C/C++. 
+* Bài làm của sinh viên: Mảng là một biến đặc biệt dùng để lưu nhiều giá trị cùng một lúc thay vì phải khai báo nhiều biến lẻ tẻ. Ví dụ muốn lưu điểm của 50 bạn trong lớp thì dùng mảng cho nhanh. Tuy nhiên mảng có thể chứa lẫn lộn cả số nguyên và chữ cái bên trong 
+
+
+Prompt 2 (chi tiết):
+Viết prompt hoàn chỉnh theo định dạng chuyên nghiệp
+Bạn hãy đóng vai trò là một giám khảo khó tính đang chấm bài làm của sinh viên
+Bạn hãy đánh giá bài làm của học viên dựa trên Rubric, chỉ ra lỗi sai và giải thích lại kiến thức theo phương pháp Feynman.
+
+
+
+
+Dữ liệu đầu vào:
+* Đề bài: Giải thích khái niệm Mảng (Array) trong ngôn ngữ lập trình C/C++. 
+* Bài làm của sinh viên: Mảng là một biến đặc biệt dùng để lưu nhiều giá trị cùng một lúc thay vì phải khai báo nhiều biến lẻ tẻ. Ví dụ muốn lưu điểm của 50 bạn trong lớp thì dùng mảng cho nhanh. Tuy nhiên mảng có thể chứa lẫn lộn cả số nguyên và chữ cái bên trong 
+* Tiêu chí chấm điểm (Rubric): dựa vào tính logic, độ chính xác, lấy ví dụ (Tính theo thang điểm 10)
+
+
+
+
+Dữ liệu đầu ra:
+Bảng tiêu chí chấm điểm (làm dưới dạng bảng Markdown)
+|Tiêu chí | Điểm tối đa | Điểm đạt được | Nhận xét chi tiết |
+ |:---:|:---: |:---:| :---:| 
+| Logic | ... | ... | ... | 
+| Độ chính xác | ... | ... | ... | 
+|Tổng điểm|... | ... |...| 
+ Phân tích lỗi sai và gợi ý sửa lại:
+* Chỗ làm tốt: “…” 
+* Lỗi sai cần khắc phục:”..” (Chỉ rõ câu hoặc ý nào sai và hướng dẫn cách sửa lại cho đúng). 
+
+
+ Giải thích theo kỹ thuật Feynman
+* Giải thích lại toàn bộ khái niệm của đề bài bằng ngôn ngữ đời thường, ngắn gọn, không dùng thuật ngữ phức tạp và kèm theo 1 ví dụ thực tế gần gũi nhất. 
+
+
+
+
+Ràng buộc:
+Trước khi chấm bài, bạn hãy kiểm tra dữ những gì mình bảo:
+1. Nếu đề bài hoặc Bài làm bị trống, chỉ chứa ký tự vô nghĩa (ví dụ: "asgrwgdf", "...", "123") thì phải trả về thông báo Lỗi và không được tự bịa ra nội dung để chấm.
+2. Nếu bài làm bị lạc đề hoàn toàn so với Đề bài thì bạn phải chấm 0 điểm toàn bộ và ghi rõ lý do: "Bài làm không làm đúng trọng tâm câu hỏi", sau đó thì bạn phải thực hiện giải thích Feynman để sinh viên hiểu lại kiến thức. 
+3. Không được có lời chào hỏi hay giải thích dài dòng.
+
+
+Bước 2: Lập bảng so sánh Trade-off
+Lập bảng so sánh tiêu chí.
+Tiêu chí
+	Giải pháp 1 (Đơn giản) 
+	Giải pháp 2 (Chi tiết) 
+	Độ dễ hiểu
+	Cao (ngắn gọn, dễ đọc ngay)
+	Trung bình (dài, có nhiều nội dung)
+	Tốn token
+	Ít 
+	Nhiều hơn 
+	Chặn lỗi biên
+	Trung bình (nếu sinh viên nộp bài trống hoặc gõ bừa, AI dễ tự suy diễn và chấm điểm ảo)
+	Cực tốt (tuân theo ràng buộc đã đề ra, nêu có trường hợp bài làm bị trống hoặc chứa kí tự vô nghĩa thì trả về thông báo lỗi)
+	Bước 3: Lựa chọn và chạy thử
+Chọn phương án tối ưu nhất, giải thích lý do chọn và chạy thử lấy kết quả
+Phương án tối ưu: Giải pháp 2 .
+Lý do lựa chọn:
+Vì nếu dùng giải pháp 1, khi sinh viên nộp nhầm bài trống hoặc gõ ký tự vô nghĩa, AI tự bịa nội dung để chấm, làm sai lệch kết quả. Còn giải pháp 2 sẽ có nhiều ràng buộc hơn, có vai trò cho AI nên sẽ đảm bảo tính chính xác mặc dù tốn Token hơn giải pháp 1.
